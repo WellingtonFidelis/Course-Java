@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class ArrayOfArrays {
 
@@ -64,7 +65,69 @@ public class ArrayOfArrays {
 			System.out.println(" ");
 		}
 		
-		// Assitir a continuação da aula: https://www.youtube.com/watch?v=99u1tAbYcww
+		// class video 20 part 3
+		
+		//Matriz tridimensional
+		
+		int[][][] matrizTridimensional = new int [3][3][3];
+		// atribuir a soma dos índices para a matriz
+		for (int i=0; i < matrizTridimensional.length; i++) {
+			for (int j=0; j < matrizTridimensional[i].length; j++) {
+				for (int k=0; k < matrizTridimensional[i][j].length; k++) {
+					matrizTridimensional[i][j][k] = i + j + k;
+				}
+			}
+		}
+		
+		// soma de todos os valores da matriz, soma dos pare e dos impares
+		int somaTotal = 0, somaPares = 0, somaImpares = 0;
+		for (int i=0; i < matrizTridimensional.length; i++) {
+			for (int j=0; j < matrizTridimensional[i].length; j++) {
+				for (int k=0; k < matrizTridimensional[i][j].length; k++) {
+					somaTotal += matrizTridimensional[i][j][k];
+					
+					if ((matrizTridimensional[i][j][k] % 2) == 0) {
+						somaPares += matrizTridimensional[i][j][k];
+					} else {
+						somaImpares += matrizTridimensional[i][j][k];
+					}
+				}
+			}
+		}
+		
+		System.out.println("A soma total é = " + somaTotal);
+		System.out.println("A soma dos números pares é = " + somaPares);
+		System.out.println("A soma dos números impares é = " + somaImpares);
+		
+		// class video 20 part 4
+		// Matrizes Irregulares
+		
+		Scanner scan =  new Scanner(System.in);
+		
+		System.out.println("Entre com o número de pessoas que serão entrevistadas: ");
+		int numEntrevistados = scan.nextInt();
+		
+		String [][] nomesFilhos = new String [numEntrevistados][];
+		
+		for (int i=0; i < nomesFilhos.length; i++) {
+			System.out.println("Entre com a quantidade de filhos: ");
+			int qtdFilhos = scan.nextInt();
+			
+			nomesFilhos[i] = new String[qtdFilhos];
+			
+			for (int j=0; j < nomesFilhos[i].length; j++) {
+				System.out.println("Digite o nome do filho " + (j+1) + ": ");
+				nomesFilhos[i][j] = scan.next();
+			}
+		}
+		
+		for (int i=0; i < nomesFilhos.length; i++) {
+			System.out.println("Pessoa " + i + " tem " + nomesFilhos[i].length + "filhos.");
+			for (int j=0; j < nomesFilhos[i].length; j++) {
+				System.out.println(nomesFilhos[i][j]);
+			}
+		}
 	}
-	
+	// lista de exercicios
+	// http://www.slidshare.net/loianeg/curso-java-basico-exercicios-aula-20
 }
