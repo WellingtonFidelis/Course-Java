@@ -102,6 +102,7 @@ public class ArrayOfArrays {
 		// class video 20 part 4
 		// Matrizes Irregulares
 		
+		@SuppressWarnings("resource")
 		Scanner scan =  new Scanner(System.in);
 		
 		System.out.println("Entre com o número de pessoas que serão entrevistadas: ");
@@ -129,5 +130,5 @@ public class ArrayOfArrays {
 		}
 	}
 	// lista de exercicios
-	// http://www.slidshare.net/loianeg/curso-java-basico-exercicios-aula-20
+	// http://www.slideshare.net/loianeg/curso-java-basico-exercicios-aula-20
 }

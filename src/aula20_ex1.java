@@ -10,7 +10,7 @@ public class aula20_ex1 {
 			for (int j=0; j < A[i].length; j++) {
 				A[i][j] = gerador.nextInt(9);
 			}
-		} 
+		}
 		
 		for (int i=0; i < A.length; i++) {
 			for (int j=0; j < A[i].length; j++) {
