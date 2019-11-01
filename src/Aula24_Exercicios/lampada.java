@@ -1,8 +1,14 @@
 package Aula24_Exercicios;
 
 public class lampada {
-	String fabricante;
+	String modelo;
+	String tensao;
 	int potencia;
-	String tipo;
+	String cor;
+	String tipoLuz;
+	int garantiaMeses;
+	String[] tipos;
+	boolean tipoAbajur;
+	String fabricante;	
 	double preco;
 }
