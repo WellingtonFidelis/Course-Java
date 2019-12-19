@@ -1,15 +1,16 @@
 package aula25a27_Exercicio3;
 
+import java.util.Scanner;
+
 public class AppTesteAluno {
 
+	static Scanner scan = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 	
 		// input data
-		Aluno A1 = new Aluno();
-		
-		A1.setName("Tom");
-		A1.setMatricula("123456");
-		A1.setCurso("Engenharia da computacao");
+		System.out.println("Digite o nome do aluno:");
+		Aluno.nome = scan.nextLine();
 	}
 
 }
