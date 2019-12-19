@@ -39,4 +39,19 @@ public class ContaCorrente extends Conta{
 		
 		return status;
 	}
+	
+	@Override
+	public void sacar(double valor) {
+		if (valor < this.getSaldo()) {
+			this.setSaldo(this.getSaldo() - valor);	
+		} else if (valor <= limite) {//verificar a opção
+			this.limite -= valor;
+		}else {
+			System.out.println("Seu saldo é de apenas " + this.getSaldo() + ".");
+		}
+	}
+	
+	public void depositar(double valor) {
+		this.setSaldo(this.getSaldo() + valor);
+	}
 }
